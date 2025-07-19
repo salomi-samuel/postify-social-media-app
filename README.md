@@ -20,22 +20,7 @@ A front-end social media web app where users can create profiles, share posts wi
 - **JavaScript (Vanilla JS)**
 - **localStorage** for persistent data
 - **No frameworks or libraries used**
-
----
-
-## 📁 Project Structure
-social-media-app/
-├── css/
-│ ├── styles.css
-│ └── responsive.css
-├── js/
-│ ├── app.js
-│ ├── posts.js
-│ ├── user.js
-│ ├── utils.js
-│ └── storage.js
-├── index.html
-
+  
 ---
 
 ## 🛠️ How to Run
