@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialConnect</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📸 Postify 🌍</h1>
+            <p>Snap. Tag. Share your vibe.</p>
+        </div>
+
+        <!-- User Setup -->
+        <div id="userSetup" class="user-setup">
+            <h2>Create Your Profile</h2>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username">
+            </div>
+            <div class="form-group">
+                <label for="bio">Bio</label>
+                <textarea id="bio" placeholder="Tell us about yourself..." rows="3"></textarea>
+            </div>
+            <button class="btn" onclick="createProfile()">Create Profile</button>
+        </div>
+
+        <!-- User Profile Display -->
+        <div id="userProfile" class="user-profile hidden">
+            <div class="profile-avatar" id="profileAvatar"></div>
+            <h3 id="profileName"></h3>
+            <p id="profileBio"></p>
+            <button class="btn btn-secondary" onclick="editProfile()">Edit Profile</button>
+        </div>
+
+        <!-- Post Creator -->
+        <div id="postCreator" class="post-creator hidden">
+            <h3>Share Something</h3>
+            <div class="form-group">
+                <textarea id="postContent" placeholder="What's on your mind?" rows="4"></textarea>
+            </div>
+            
+            <div class="file-upload">
+                <input type="file" id="mediaUpload" accept="image/*,video/*" onchange="handleFileUpload(this)">
+                <label for="mediaUpload">📷 Add Photo/Video</label>
+                <img id="imagePreview" class="image-preview" alt="Preview">
+            </div>
+            
+            <div class="tag-input">
+                <input type="text" id="tagInput" placeholder="Add tags (press Enter)" onkeypress="handleTagInput(event)">
+                <div class="tags-display" id="tagsDisplay"></div>
+            </div>
+            
+            <button class="btn" onclick="createPost()">Share Post</button>
+        </div>
+
+        <!-- Posts Container -->
+        <div id="postsContainer" class="posts-container"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/posts.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
